@@ -62,13 +62,13 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
                     digB1.setText("");
                     digC1.setText("");
                     digA1.requestFocus(); // cursor
-                    Toast.makeText(getBaseContext(), "Tente Outra Vez1",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Tente novamente",Toast.LENGTH_LONG).show();
 
                 }else{
                     //digB2.requestFocus();
                     digB1.setText("-");
                     digC1.setText("-");
-                    va1.setText(" A =  5  -  2");
+                    va2.setText(">> B =  3 ** 3");
                     Toast.makeText(getBaseContext(), "Você Acertou1",Toast.LENGTH_LONG).show();
 
                 }
@@ -89,7 +89,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
                     digC3.requestFocus();
                     digA2.setText("3");
                     digC2.setText("-");
-                    va2.setText(" B =  3 ** 3");
+                    va3.setText(">> C =  B/A+1");
 
                 }
                 //       caixa C3
@@ -109,7 +109,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
                     digA4.requestFocus();
                     digA3.setText("3");
                     digB3.setText("27");
-                    va3.setText(" C =  B/A+1");
+                    va4.setText(">> A =  A - 2");
 
                 }
                 //       caixa A4
@@ -129,7 +129,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
                     digC5.requestFocus();
                     digB4.setText("27");
                     digC4.setText("10");
-                    va4.setText(" A =  A - 2");
+                    va5.setText(">> C =  B - C");
 
                 }
                 //       caixa c5
@@ -147,7 +147,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
                 }else{
                     digA5.setText("1");
                     digB5.setText("27");
-                    va5.setText(" C =  B - C");
+
 
                 }
 
@@ -184,7 +184,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
 
             }
         });
-        menu.setOnClickListener(new View.OnClickListener() {
+        /*menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {  //ação para proxima tela
                 Intent menu = new Intent(getApplicationContext(),Tela1.class);
@@ -192,6 +192,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
 
             }
         });
+        */
 
 
     }
@@ -200,7 +201,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
         proximo = findViewById(R.id.proximo);
         voltar = findViewById(R.id.voltar);
         botAjuda1 = findViewById(R.id.botAjuda);
-        menu = findViewById(R.id.menu1);
+        //menu = findViewById(R.id.menu1);
         botConfirmar = findViewById(R.id.botConfirmar);
     }
 
