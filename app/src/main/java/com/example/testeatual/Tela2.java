@@ -1,8 +1,5 @@
 package com.example.testeatual;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatEditText;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Tela2<cxA1, va1> extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Tela2 extends AppCompatActivity {
     public ImageView botAjuda1;
     public ImageView proximo;
     public ImageView voltar;
-    public ImageView menu;
+    //public ImageView menu;
 
 
     TextView va1;TextView va2;TextView va3;TextView va4;TextView va5;
@@ -31,7 +30,7 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela2);
-        setTitle("Seja Bem Vindo!");
+        setTitle("                 boa sorte!...");
 
 
 
@@ -50,12 +49,13 @@ public class Tela2<cxA1, va1> extends AppCompatActivity {
         botConfirmar = findViewById(R.id.botConfirmar);
 
         botConfirmar.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("ResourceType")
+            @SuppressLint({"ResourceType", "SetTextI18n"})
             @Override
             public void onClick(View view) {
 
                 String x1 = digA1.getText().toString();  //transforma em inteiro
                 String j1 = "3";
+                
                 //       caixa A1
                 if(!x1.equals(j1)) {
                     digA1.setText("");  //apaga

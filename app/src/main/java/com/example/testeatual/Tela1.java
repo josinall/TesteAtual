@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 public class Tela1 extends AppCompatActivity {
     public ImageView exercicio;
+    public ImageView sobre;
 
 
     @Override
@@ -16,7 +17,8 @@ public class Tela1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela1);
         IniciarComponentes();
-        setTitle("-      Escolha um botão abaixo   -");
+
+        setTitle("-           Escolha um botão abaixo        -");
 
         exercicio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,9 +28,19 @@ public class Tela1 extends AppCompatActivity {
 
             }
         });
+
+        sobre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent exercicios = new Intent(Tela1.this,Tela5.class);
+                startActivity(exercicios);
+
+            }
+        });
     }
     private void IniciarComponentes() {
 
         exercicio = findViewById(R.id.botIniciar);
+        sobre = findViewById(R.id.sobre2);
     }
 }

@@ -7,32 +7,42 @@
     tools:context=".Tela6">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="323dp"
-        android:layout_height="590dp"
+        android:id="@+id/Ajuda1"
+        android:layout_width="322dp"
+        android:layout_height="517dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.411"
+        app:srcCompat="@drawable/dica1a"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/menu6"
+        android:layout_width="149dp"
+        android:layout_height="106dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/dica1a" />
+        app:layout_constraintVertical_bias="0.94"
+        app:srcCompat="@drawable/menu1"
+        tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/meu_teste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/teste_mesa"
-        tools:layout_editor_absoluteY="2dp" />
-
-    <ImageView
-        android:id="@+id/voltar6"
-        android:layout_width="112dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginBottom="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bot_voltar" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/tabela"
+        tools:ignore="ContentDescription" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

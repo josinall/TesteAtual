@@ -6,21 +6,23 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".Tela3">
+    tools:context=".Tela2">
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/teste_mesa"
+        app:srcCompat="@drawable/tabela"
         tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="4dp" />
+        tools:layout_editor_absoluteY="4dp"
+        tools:ignore="ContentDescription" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UselessLeaf">
 
     </LinearLayout>
 
@@ -34,13 +36,13 @@
 
         <ImageView
             android:id="@+id/botAjuda"
-            android:layout_width="89dp"
-            android:layout_height="70dp"
+            android:layout_width="105dp"
+            android:layout_height="79dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.673"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/bot_ajuda" />
 
         <TextView
@@ -54,7 +56,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.022"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
@@ -62,31 +64,27 @@
 
         <ImageView
             android:id="@+id/proximo"
-            android:layout_width="83dp"
-            android:layout_height="32dp"
-            android:background="#3F51B5"
+            android:layout_width="124dp"
+            android:layout_height="49dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintHorizontal_bias="0.979"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.551"
-            app:srcCompat="@android:drawable/ic_media_ff"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintVertical_bias="0.65"
+            app:srcCompat="@drawable/bot_next" />
 
         <ImageView
             android:id="@+id/voltar"
-            android:layout_width="83dp"
-            android:layout_height="32dp"
-            android:background="#3F51B5"
+            android:layout_width="124dp"
+            android:layout_height="49dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.048"
+            app:layout_constraintHorizontal_bias="0.02"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.551"
-            app:srcCompat="@android:drawable/ic_media_rew"
-            tools:ignore="ContentDescription" />
+            app:layout_constraintVertical_bias="0.666"
+            app:srcCompat="@drawable/bot_voltar" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -203,16 +201,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.670"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.263"
-            tools:ignore="Autofill,SpUsage" />
+            tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxA2"
@@ -222,15 +220,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:textColor="#191515"
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.670"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.430"
+            tools:ignore="TouchTargetSizeCheck"
             tools:text="" />
 
         <EditText
@@ -241,15 +240,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.670"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.61" />
+            app:layout_constraintVertical_bias="0.61"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxA4"
@@ -259,15 +259,16 @@
             android:gravity="center"
             android:hint='?'
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.670"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.784" />
+            app:layout_constraintVertical_bias="0.784"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxA5"
@@ -277,15 +278,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.670"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.963" />
+            app:layout_constraintVertical_bias="0.963"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxB1"
@@ -295,15 +297,16 @@
             android:gravity="center"
             android:hint="-"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.815"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26" />
+            app:layout_constraintVertical_bias="0.26"
+            tools:ignore="SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxB2"
@@ -313,15 +316,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.815"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.430" />
+            app:layout_constraintVertical_bias="0.430"
+            tools:ignore="SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxB3"
@@ -331,15 +335,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.815"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.61" />
+            app:layout_constraintVertical_bias="0.61"
+            tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxB4"
@@ -349,15 +354,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.815"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.784" />
+            app:layout_constraintVertical_bias="0.784"
+            tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxB5"
@@ -367,15 +373,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.815"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.963" />
+            app:layout_constraintVertical_bias="0.963"
+            tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxC1"
@@ -385,15 +392,16 @@
             android:gravity="center"
             android:hint="-"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.960"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.26" />
+            app:layout_constraintVertical_bias="0.26"
+            tools:ignore="Autofill,HardcodedText,SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxC2"
@@ -403,15 +411,16 @@
             android:gravity="center"
             android:hint="-"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.960"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.430" />
+            app:layout_constraintVertical_bias="0.430"
+            tools:ignore="Autofill,HardcodedText,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxC3"
@@ -421,15 +430,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.960"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.61" />
+            app:layout_constraintVertical_bias="0.61"
+            tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxC4"
@@ -439,15 +449,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.960"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.784" />
+            app:layout_constraintVertical_bias="0.784"
+            tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/cxC5"
@@ -457,15 +468,16 @@
             android:gravity="center"
             android:hint="?"
             android:inputType="number"
-            android:textStyle="bold"
             android:text=""
             android:textSize="22dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.960"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.963" />
+            app:layout_constraintVertical_bias="0.963"
+            tools:ignore="Autofill,SpUsage,TouchTargetSizeCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -480,7 +492,7 @@
             android:layout_height="59dp"
             android:backgroundTint="#009688"
             android:outlineSpotShadowColor="@color/black"
-            android:text="Enviar Resposta"
+            android:text="Verificar  Resposta"
             android:textStyle="bold"
             app:cornerRadius="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
