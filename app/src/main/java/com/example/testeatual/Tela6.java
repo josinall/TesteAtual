@@ -20,15 +20,12 @@ public class Tela6 extends AppCompatActivity {
         setTitle("             Ajuda aqui!");
         IniciarComponentes();
 
-        menu6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent tela6 = new Intent(Tela6.this,Tela1.class);
-                startActivity(tela6);
-            }
+        menu6.setOnClickListener(v -> {
+            Intent tela6 = new Intent(Tela6.this,Tela1.class);
+            startActivity(tela6);
         });
     }
-    @SuppressLint("WrongViewCast")
+
     private void IniciarComponentes() {
         menu6 = findViewById(R.id.menu6);
 
