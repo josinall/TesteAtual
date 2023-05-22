@@ -18,7 +18,7 @@ public class Tela1 extends AppCompatActivity {
         setContentView(R.layout.activity_tela1);
         IniciarComponentes();
 
-        setTitle("-           Escolha um botão abaixo        -");
+        setTitle("");
 
         exercicio.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,6 @@
 package com.example.testeatual;
-
+import java.util.ArrayList;
+//import java.util.Scanner;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,11 +19,12 @@ public class Tela2 extends AppCompatActivity {
     public ImageView voltar;
     //public ImageView menu;
 
-
+    Tabela linha0;
     TextView va1;TextView va2;TextView va3;TextView va4;TextView va5;
     EditText digA1;EditText digA2;EditText digA3;EditText digA4;EditText digA5;
     EditText digB1;EditText digB2;EditText digB3;EditText digB4;EditText digB5;
     EditText digC1;EditText digC2;EditText digC3;EditText digC4;EditText digC5;
+
 
     Button botConfirmar;
 
@@ -30,10 +32,9 @@ public class Tela2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela2);
-        setTitle("                 boa sorte!...");
-
-
-
+        setTitle("");
+        //Toast t1 = Toast.makeText(getBaseContext(), "Você Acertou",Toast.LENGTH_LONG);
+        //Toast t2 = Toast.makeText(getBaseContext(), "tente novamente outro número",Toast.LENGTH_LONG);
         va1 = findViewById(R.id.linha1);  // instancio
         va2 = findViewById(R.id.linha2);
         va3 = findViewById(R.id.linha3);
@@ -53,109 +54,351 @@ public class Tela2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String x1 = digA1.getText().toString();  //transforma em inteiro
-                String j1 = "3";
-                
-                //       caixa A1
-                if(!x1.equals(j1)) {
-                    digA1.setText("");  //apaga
-                    digB1.setText("");
-                    digC1.setText("");
-                    digA1.requestFocus(); // cursor
-                    Toast.makeText(getBaseContext(), "Tente novamente",Toast.LENGTH_LONG).show();
+                //transforma em inteiro
+                String A1 = digA1.getText().toString();
+                String A2 = digA2.getText().toString();
+                String A3 = digA3.getText().toString();
+                String A4 = digA4.getText().toString();
+                String A5 = digA5.getText().toString();
 
-                }else{
-                    //digB2.requestFocus();
-                    digB1.setText("-");
-                    digC1.setText("-");
-                    va2.setText(">> B =  3 ** 3");
-                    Toast.makeText(getBaseContext(), "Você Acertou1",Toast.LENGTH_LONG).show();
+                String B1 = digB1.getText().toString();
+                String B2 = digB2.getText().toString();
+                String B3 = digB3.getText().toString();
+                String B4 = digB4.getText().toString();
+                String B5 = digB5.getText().toString();
 
-                }
-                digB2.requestFocus();
+                String C1 = digC1.getText().toString();
+                String C2 = digC2.getText().toString();
+                String C3 = digC3.getText().toString();
+                String C4 = digC4.getText().toString();
+                String C5 = digC5.getText().toString();
 
-                //       caixa B2
-                String x2 = digB2.getText().toString();  //transforma em inteiro
+                ArrayList<Colunas> linha = new ArrayList<Colunas>();
+                int[] numerosLidos = new int[5];
+                int[] numerosLidos2 = new int[5];
+               /*
+              String dig1 = "3";
+                String dig2 = "5";
+                String dig3 = "9";
+                String dig4 = "12";
+                String dig5 = "15";
+
+                String b1 = "3";
+                String b11 = "1";
                 String b2 = "27";
-
-                if(!x2.equals(b2)) {
-                    digA2.setText("");
-                    digB2.setText("");
-                    digC2.setText("");
-                    //digB2.requestFocus();
-
-                }else{
-                    //Toast.makeText(getBaseContext(), "Você Acertou2",Toast.LENGTH_LONG).show();
-                    digC3.requestFocus();
-                    digA2.setText("3");
-                    digC2.setText("-");
-                    va3.setText(">> C =  B/A+1");
-
-                }
-                //       caixa C3
-                String x3 = digC3.getText().toString();  //transforma em inteiro
                 String b3 = "10";
-
-                if(!x3.equals(b3)) {
-                    //Toast.makeText(getBaseContext(), "Tente Outra Vez3",Toast.LENGTH_LONG).show();
-                    digA3.setText("");
-                    digB3.setText("");
-                    digC3.setText("");
-                    //digC3.requestFocus();
-
-
-                }else{
-                    Toast.makeText(getBaseContext(), "Você Acertou3",Toast.LENGTH_LONG).show();
-                    digA4.requestFocus();
-                    digA3.setText("3");
-                    digB3.setText("27");
-                    va4.setText(">> A =  A - 2");
-
-                }
-                //       caixa A4
-                String x4 = digA4.getText().toString();  //transforma em inteiro
-                String b4 = "1";
-
-                if(!x4.equals(b4)) {
-                    //Toast.makeText(getBaseContext(), "Tente Outra Vez4",Toast.LENGTH_LONG).show();
-                    //digA4.requestFocus();
-                    digA4.setText("");
-                    digB4.setText("");
-                    digC4.setText("");
-
-
-                }else{
-                    Toast.makeText(getBaseContext(), "Você Acertou4",Toast.LENGTH_LONG).show();
-                    digC5.requestFocus();
-                    digB4.setText("27");
-                    digC4.setText("10");
-                    va5.setText(">> C =  B - C");
-
-                }
-                //       caixa c5
-                String x5 = digC5.getText().toString();  //transforma em inteiro
                 String b5 = "17";
 
-                if(!x5.equals(b5)) {
-                    //Toast.makeText(getBaseContext(), "Tente Outra Vez5",Toast.LENGTH_LONG).show();
-                    //digC5.requestFocus();
-                    digA5.setText("");
+                String x1 = "3";
+                String x2 = "27";
+                String x3 = "10";
+                String x4 = "1";
+                String x5 = "17";
+                */
+
+                Colunas linha0 = new Colunas("3", "-", "-");
+                Colunas linha1 = new Colunas("3", "27", "-");
+                Colunas linha2 = new Colunas("3", "27", "10");
+                Colunas linha3 = new Colunas("1", "27", "10");
+                Colunas linha4 = new Colunas("1", "27", "17");
+
+                linha.add(linha0);
+                linha.add(linha1);
+                linha.add(linha2);
+                linha.add(linha3);
+                linha.add(linha4);
+
+                //--------------------------LINHA 1 A1----------------------------------
+
+                if (!A1.equalsIgnoreCase(linha.get(0).getA())) {
+                    digA1.setText("");  //apaga
+                    digB1.setText("-");
+                    digC1.setText("-");
+
+                } else {// linha 1
+                    digA2.requestFocus();//cursor
+                    digA1.setText("3");
+                    digB1.setText("-");
+                    digC1.setText("-");
+                    va1.setText(">> A =  5  -  2");
+                    numerosLidos[0] = 1;
+                    numerosLidos2[0] = 20;
+                }
+                ///----------------------LINHA 2 A2--------------------------------------
+                if (!A2.equalsIgnoreCase(linha.get(1).getA())) {
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    }
+                    digA2.setText("");  //se errar numero ficar vazio
+                    //digA2.requestFocus();
+                } else {
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    }
+                    digB2.requestFocus();//cursor
+
+                }
+                //--------------------------LINHA 2 B2------------------------------------
+                if (!B2.equalsIgnoreCase(linha.get(1).getB())) {
+                    digB2.setText("");  //apaga
+                    digC2.setText("-");
+                    //digA2.setText("");
+
+                } else {//linha 2
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    }
+                    if (A2.equalsIgnoreCase(linha.get(1).getA())//se as duas forem certas
+                            && B2.equalsIgnoreCase(linha.get(1).getB())) {
+                        digA3.requestFocus();
+                        digC2.setText("-");
+                        va2.setText(">> B =  3 ** 3");
+                        numerosLidos[1] = 1;
+                        numerosLidos2[1] = 20;
+                    }
+                }//------------------------LINHA 3 A3 --------------------------------------
+                if (!A3.equalsIgnoreCase(linha.get(2).getA())) {
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    }
+                    digA3.setText("");  //apaga
+                } else {
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    }
+                    digB3.requestFocus();
+                }
+                //-------------------------LINHA 3 B3 --------------------------------------
+                if (!B3.equalsIgnoreCase(linha.get(2).getB())) {
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    }
+                    digB3.setText("");  //apaga
+                } else {
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    }
+                    digC3.requestFocus();
+                }
+                //-------------------------LINHA 3 C3---------------------------------------
+                if (!C3.equalsIgnoreCase(linha.get(2).getC())) {
+                    digC3.setText("");  //apaga
+                    //digB3.setText("");
+                    //digA3.setText("");
+
+                } else {// linha 3
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    } else if (A2.isEmpty()) {
+                        digA2.requestFocus();//cursor
+                    } else if (B2.isEmpty()) {
+                        digB2.requestFocus();//cursor
+                    } else if (A3.isEmpty()) {
+                        digA3.requestFocus();//cursor
+                    } else if (B3.isEmpty()) {
+                        digB3.requestFocus();//cursor
+                    }
+                    if (A3.equalsIgnoreCase(linha.get(2).getA())
+                            && B3.equalsIgnoreCase(linha.get(2).getB())
+                            && C3.equalsIgnoreCase(linha.get(2).getC())) {
+                        digA4.requestFocus();
+                        va3.setText(">> C =  B/A+1");
+                        numerosLidos[2] = 1;
+                        numerosLidos2[2] = 20;
+                    }
+                }
+                //----------------------------LINHA 4 A4--------------------------------
+                if (!A4.equalsIgnoreCase(linha.get(3).getA())) {
+                    digA4.setText("");  //apaga
+
+                } else {//linha 4
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    } else if (A2.isEmpty()) {
+                        digA2.requestFocus();//cursor
+                    } else if (B2.isEmpty()) {
+                        digB2.requestFocus();//cursor
+                    } else if (C3.isEmpty()) {
+                        digC3.requestFocus();//cursor
+                    } else if (A4.isEmpty()) {
+                        digA4.requestFocus();//cursor
+                    }
+                    digB4.requestFocus();
+                }
+                //-----------------------LINHA 4 B4 -----------------------------------
+                if (!B4.equalsIgnoreCase(linha.get(3).getB())) {
+                    digB4.setText("");
+                } else {//linha 4
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    } else if (A2.isEmpty()) {
+                        digA2.requestFocus();//cursor
+                    } else if (B2.isEmpty()) {
+                        digB2.requestFocus();//cursor
+                    } else if (C3.isEmpty()) {
+                        digC3.requestFocus();//cursor
+                    } else if (A4.isEmpty()) {
+                        digA4.requestFocus();//cursor
+                    }
+                    digC4.requestFocus();
+                }
+                //-----------------------LINHA 4 C4 -----------------------------------
+                if (!C4.equalsIgnoreCase(linha.get(3).getC())) {
+                    digC4.setText("");
+
+                } else {//linha 4
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    } else if (A2.isEmpty()) {
+                        digA2.requestFocus();//cursor
+                    } else if (B2.isEmpty()) {
+                        digB2.requestFocus();//cursor
+                    } else if (C3.isEmpty()) {
+                        digC3.requestFocus();//cursor
+                    } else if (A4.isEmpty()) {
+                        digA4.requestFocus();//cursor
+                    } else if (B4.isEmpty()) {
+                        digB4.requestFocus();//cursor
+                    }
+
+                    if (A4.equalsIgnoreCase(linha.get(3).getA())
+                            && B4.equalsIgnoreCase(linha.get(3).getB())
+                            && C4.equalsIgnoreCase(linha.get(3).getC())) {
+                        digA5.requestFocus();
+                        va4.setText(">> A =  A - 2");
+                        numerosLidos[3] = 1;
+                        numerosLidos2[3] = 20;
+
+                    }
+                }
+                //-----------------------LINHA 5 A5 -----------------------------------
+                if (!A5.equalsIgnoreCase(linha.get(4).getA())) {
+                    digA5.setText("");  //apaga
+
+                } else { // linha 5
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    } else if (A2.isEmpty()) {
+                        digA2.requestFocus();//cursor
+                    } else if (B2.isEmpty()) {
+                        digB2.requestFocus();//cursor
+                    } else if (C3.isEmpty()) {
+                        digC3.requestFocus();//cursor
+                    } else if (A4.isEmpty()) {
+                        digA4.requestFocus();//cursor
+                    } else if (B4.isEmpty()) {
+                        digB4.requestFocus();//cursor
+                    } else if (C4.isEmpty()) {
+                        digC4.requestFocus();//cursor
+                    }
+                    digB5.requestFocus();
+                }
+                //-----------------------LINHA 5 B5 -----------------------------------
+                if (!B5.equalsIgnoreCase(linha.get(4).getB())) {
                     digB5.setText("");
-                    digC5.setText("");
 
-
-                }else{
-                    digA5.setText("1");
-                    digB5.setText("27");
+                } else { // linha 5
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    } else if (A2.isEmpty()) {
+                        digA2.requestFocus();//cursor
+                    } else if (B2.isEmpty()) {
+                        digB2.requestFocus();//cursor
+                    } else if (C3.isEmpty()) {
+                        digC3.requestFocus();//cursor
+                    } else if (A4.isEmpty()) {
+                        digA4.requestFocus();//cursor
+                    } else if (B4.isEmpty()) {
+                        digB4.requestFocus();//cursor
+                    } else if (C4.isEmpty()) {
+                        digC4.requestFocus();//cursor
+                    } else if (A5.isEmpty()) {
+                        digA5.requestFocus();//cursor
+                    }
+                    digC5.requestFocus();
+                }
+                //-----------------------LINHA 5 C5------------------------------------
+                if (!C5.equalsIgnoreCase(linha.get(4).getC())) {
+                    digC5.setText("");  //apaga
+                } else { // linha 5
+                    if (A1.isEmpty()) {
+                        digA1.requestFocus();//cursor
+                    } else if (A2.isEmpty()) {
+                        digA2.requestFocus();//cursor
+                    } else if (B2.isEmpty()) {
+                        digB2.requestFocus();//cursor
+                    } else if (C3.isEmpty()) {
+                        digC3.requestFocus();//cursor
+                    } else if (A4.isEmpty()) {
+                        digA4.requestFocus();//cursor
+                    } else if (B4.isEmpty()) {
+                        digB4.requestFocus();//cursor
+                    } else if (C4.isEmpty()) {
+                        digC4.requestFocus();//cursor
+                    } else if (A5.isEmpty()) {
+                        digA5.requestFocus();//cursor
+                    } else if (B5.isEmpty()) {
+                        digB5.requestFocus();//cursor
+                    }
+                    if (A5.equalsIgnoreCase(linha.get(4).getA())
+                            && B5.equalsIgnoreCase(linha.get(4).getB())
+                            && C5.equalsIgnoreCase(linha.get(4).getC())) {
+                        va5.setText(">> C =  B - C");
+                        numerosLidos[4] = 1;
+                        numerosLidos2[4] = 20;
+                    }
 
 
                 }
+                for (int i = 0; i < 5; i++) {
+
+                    if (!A1.equalsIgnoreCase(linha.get(0).getA())) {
+                        numerosLidos[i] += 1;
+                    }
+
+                 /*   if (A2.equalsIgnoreCase(linha.get(1).getA())//se as duas forem certas
+                            && B2.equalsIgnoreCase(linha.get(1).getB())) {
+                        numerosLidos[i] += 1;
+                    }
+
+                    if (A3.equalsIgnoreCase(linha.get(2).getA())
+                            && B3.equalsIgnoreCase(linha.get(2).getB())
+                            && C3.equalsIgnoreCase(linha.get(2).getC())) {
+                        numerosLidos[i] += 1;
+                    }
+
+
+                    if (A4.equalsIgnoreCase(linha.get(3).getA())
+                            && B4.equalsIgnoreCase(linha.get(3).getB())
+                            && C4.equalsIgnoreCase(linha.get(3).getC())) {
+                        numerosLidos[i] += 1;
+                    }
+                    if (A5.equalsIgnoreCase(linha.get(4).getA())
+                            && B5.equalsIgnoreCase(linha.get(4).getB())
+                            && C5.equalsIgnoreCase(linha.get(4).getC())) {
+                        numerosLidos[i] += 1;
+
+                    }*/
+
+
+                }
+                for (int i = 0; i < 5; i++) {
+
+                }
+                //Toast.makeText(getBaseContext(), "vc fez " + numerosLidos[0] + " pontos", Toast.LENGTH_LONG).show();
+                //--------------------------mensagem do toast para numLidos---------------
+
+                int soma=0;
+                for(int k=0; k<numerosLidos.length; k++) {
+                    soma+= numerosLidos2[k];
+                }
+                if(soma == 100){
+                    Toast.makeText(getBaseContext(), "Parabéns Você Concluiu o Exercício 1 ", Toast.LENGTH_LONG).show();
+                }
+
 
 
             }
-
-
-
         });
         IniciarComponentes();
 

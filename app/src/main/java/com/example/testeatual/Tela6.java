@@ -17,7 +17,7 @@ public class Tela6 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela6);
-        setTitle("             Ajuda aqui!");
+        setTitle("");
         IniciarComponentes();
 
         menu6.setOnClickListener(v -> {
