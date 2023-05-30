@@ -15,12 +15,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class Tela3 extends AppCompatActivity {
-    public ImageView botAjuda3;
+    public ImageView botDica3;
     public ImageView proximo3;
     public ImageView voltar3;
-    public ImageView menu3;
-    //public Button button_sair;
-
+    //public ImageView menu3;
 
     Tabela linha0;
     TextView va1;TextView va2;TextView va3;TextView va4;TextView va5;
@@ -35,7 +33,8 @@ public class Tela3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela3);
         setTitle("");
-
+        //Toast t1 = Toast.makeText(getBaseContext(), "Você Acertou",Toast.LENGTH_LONG);
+        //Toast t2 = Toast.makeText(getBaseContext(), "tente novamente outro número",Toast.LENGTH_LONG);
         va1 = findViewById(R.id.linha1);  // instancio
         va2 = findViewById(R.id.linha2);
         va3 = findViewById(R.id.linha3);
@@ -75,7 +74,7 @@ public class Tela3 extends AppCompatActivity {
                 String C5 = digC5.getText().toString();
 
                 ArrayList<Colunas> linha = new ArrayList<Colunas>();
-                int[] numerosLidos = new int[5];
+                int[] numerosLidos1 = new int[5];
                 int[] numerosLidos2 = new int[5];
 
 
@@ -97,6 +96,8 @@ public class Tela3 extends AppCompatActivity {
                     digA1.setText("-");
                     digB1.setText("-");
                     digC1.setText("");
+                    digC1.setError(" preencha o campo");
+                    numerosLidos1[0] = 1;
 
                 } else {
                     digA1.setText("-");
@@ -104,27 +105,44 @@ public class Tela3 extends AppCompatActivity {
                     digC1.setText("49");
                     va1.setText(">> C =  49");
                     digC2.requestFocus();
-                    numerosLidos[0] = 1;
-                    numerosLidos2[0] = 20;
+                    numerosLidos1[0] = 5;
                 }
                 ///----------------------LINHA 2 C2--------------------------------------
                 if (!C2.equalsIgnoreCase(linha.get(1).getC())) {
                     if (C1.isEmpty()) {//SE C1 TIVER VAZIO
+
                         digC1.requestFocus();//cursor C1
                     }
-                    digC2.setText("");
-
+                    if(C2.isEmpty()){
+                        digC2.setError(" preencha o campo");
+                    } else {
+                        digC2.setText("");
+                        numerosLidos1[0] = 2;
+                    }
                 } else {
-                  /*  if (C1.isEmpty()) {
+                    if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
-                    }*/
+                    }
                     digA2.requestFocus();
+                    numerosLidos1[0] = 10;
 
                 }
                 //--------------------------LINHA 2 A2------------------------------------
                 if (!A2.equalsIgnoreCase(linha.get(1).getA())) {//se for falso
+                    if(C1.isEmpty()){
+                        digC1.setError(" preencha ");
+                        digC1.requestFocus();//cursor
+
+                    }if (A2.isEmpty()){
+                        digA2.setError(" preencha o campo");
+                        //
+                    }else{
+                        digA2.setText("");  //se errar numero ficar vazio
+                        numerosLidos1[0] = 3;
+                    }
                     digA2.setText("");
                     digB2.setText("-");
+
 
                 } else {//linha 2
                    /* if (A1.isEmpty()) {
@@ -135,36 +153,60 @@ public class Tela3 extends AppCompatActivity {
                         digC3.requestFocus();
                         digB2.setText("-");
                         va2.setText(">> A =(C-7)/6");
-                        numerosLidos[1] = 1;
-                        numerosLidos2[1] = 20;
+                        numerosLidos1[0] = 15;
+
                     }
                 }//------------------------LINHA 3 C3 --------------------------------------
                 if (!C3.equalsIgnoreCase(linha.get(2).getC())) {
-                    //if (A1.isEmpty()) {
-                       // digA1.requestFocus();//cursor
-                    //}
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }
+                    if (C3.isEmpty()){
+                        digC3.setError(" preencha o campo");
+                        //
+                    }else{
+                        digC3.setText("");  //se errar numero ficar vazio
+                        numerosLidos1[0] = 4;
+                    }
                     digC3.setText("");  //apaga
                 } else {
                   /*  if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     }*/
+                    numerosLidos1[0] = 20;
                     digB3.requestFocus();
                 }
                 //-------------------------LINHA 3 B3 --------------------------------------
                 if (!B3.equalsIgnoreCase(linha.get(2).getB())) {
-                  /*  if (A1.isEmpty()) {
-                        digA1.requestFocus();//cursor
-                    }*/
-                    digB3.setText("");
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (B3.isEmpty()){
+                        digB3.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 6;
+                        digB3.setText("");
+                    }
+
                 } else {
                   /*  if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     }*/
+                    numerosLidos1[0] = 25;
                     digA3.requestFocus();
                 }
                 //-------------------------LINHA 3 A3---------------------------------------
                 if (!A3.equalsIgnoreCase(linha.get(2).getA())) {
-                    digA3.setText("");
+
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (A3.isEmpty()){
+                        digA3.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 7;
+                        digA3.setText("");
+                    }
 
 
                 } else {// linha 3
@@ -184,13 +226,22 @@ public class Tela3 extends AppCompatActivity {
                             && C3.equalsIgnoreCase(linha.get(2).getC())) {
                         digC4.requestFocus();
                         va3.setText(">> B =  C % 5");
-                        numerosLidos[2] = 1;
-                        numerosLidos2[2] = 20;
+
+                        numerosLidos1[0] = 30;
                     }
                 }
                 //----------------------------LINHA 4 C4--------------------------------
                 if (!C4.equalsIgnoreCase(linha.get(3).getC())) {
-                    digC4.setText("");
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (C4.isEmpty()){
+                        digC4.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 8;
+                        digC4.setText("");
+                    }
+
 
                 } else {//linha 4
                   /*  if (A1.isEmpty()) {
@@ -204,11 +255,21 @@ public class Tela3 extends AppCompatActivity {
                     } else if (A4.isEmpty()) {
                         digA4.requestFocus();//cursor
                     }*/
+                    numerosLidos1[0] = 35;
                     digB4.requestFocus();
                 }
                 //-----------------------LINHA 4 B4 -----------------------------------
                 if (!B4.equalsIgnoreCase(linha.get(3).getB())) {
-                    digB4.setText("");
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (B4.isEmpty()){
+                        digB4.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 9;
+                        digB4.setText("");
+                    }
+
                 } else {//linha 4
                   /*  if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
@@ -221,11 +282,21 @@ public class Tela3 extends AppCompatActivity {
                     } else if (A4.isEmpty()) {
                         digA4.requestFocus();//cursor
                     }*/
+                    numerosLidos1[0] = 40;
                     digA4.requestFocus();
                 }
                 //-----------------------LINHA 4 A4 -----------------------------------
                 if (!A4.equalsIgnoreCase(linha.get(3).getA())) {
-                    digA4.setText("");
+
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (A4.isEmpty()){
+                        digA4.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 11;
+                        digA4.setText("");
+                    }
 
                 } else {//linha 4
                   /*  if (A1.isEmpty()) {
@@ -247,14 +318,23 @@ public class Tela3 extends AppCompatActivity {
                             && C4.equalsIgnoreCase(linha.get(3).getC())) {
                         digC5.requestFocus();
                         va4.setText(">> C =  C/A+2");
-                        numerosLidos[3] = 1;
-                        numerosLidos2[3] = 20;
+
+                        numerosLidos1[0] = 45;
 
                     }
                 }
                 //-----------------------LINHA 5 C5 -----------------------------------
                 if (!C5.equalsIgnoreCase(linha.get(4).getC())) {
-                    digC5.setText("");  //apaga
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (C5.isEmpty()){
+                        digC5.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 12;
+                        digC5.setText("");
+                    }
+
 
                 } else { // linha 5
                    /* if (A1.isEmpty()) {
@@ -272,11 +352,21 @@ public class Tela3 extends AppCompatActivity {
                     } else if (C4.isEmpty()) {
                         digC4.requestFocus();//cursor
                     }*/
+                    numerosLidos1[0] = 50;
                     digB5.requestFocus();
                 }
                 //-----------------------LINHA 5 B5 -----------------------------------
                 if (!B5.equalsIgnoreCase(linha.get(4).getB())) {
-                    digB5.setText("");
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (B5.isEmpty()){
+                        digB5.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 13;
+                        digB5.setText("");
+                    }
+
 
                 } else { // linha 5
                   /*  if (A1.isEmpty()) {
@@ -296,11 +386,21 @@ public class Tela3 extends AppCompatActivity {
                     } else if (A5.isEmpty()) {
                         digA5.requestFocus();//cursor
                     }*/
+                    numerosLidos1[0] = 55;
                     digA5.requestFocus();
                 }
                 //-----------------------LINHA 5 A5------------------------------------
                 if (!A5.equalsIgnoreCase(linha.get(4).getA())) {
-                    digA5.setText("");  //apaga
+                    if (C1.isEmpty()) {
+                        digC1.requestFocus();//cursor
+                    }if (A5.isEmpty()){
+                        digA5.setError(" preencha o campo");
+                        //
+                    }else {
+                        numerosLidos1[0] = 14;
+                        digA5.setText("");
+                    }
+
                 } else { // linha 5
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
@@ -329,31 +429,99 @@ public class Tela3 extends AppCompatActivity {
                             && B5.equalsIgnoreCase(linha.get(4).getB())
                             && C5.equalsIgnoreCase(linha.get(4).getC())) {
                         va5.setText(">> A =  B**3");
-                        numerosLidos[4] = 1;
-                        numerosLidos2[4] = 20;
+
+                        numerosLidos1[0] = 60;
                     }
 
 
                 }
-                for (int i = 0; i < 5; i++) {
-
-                    if (!A1.equalsIgnoreCase(linha.get(0).getA())) {
-                        numerosLidos[i] += 1;
-                    }
+                for (int K = 0; K < 5; K++) {
 
                 }
-                for (int i = 0; i < 5; i++) {
-
-                }
-                //Toast.makeText(getBaseContext(), "vc fez " + numerosLidos[0] + " pontos", Toast.LENGTH_LONG).show();
+                Toast.makeText(getBaseContext(), "vc fez " + numerosLidos1[0] + " pontos", Toast.LENGTH_LONG).show();
                 //--------------------------mensagem do toast para numLidos---------------
 
                 int soma=0;
-                for(int k=0; k<numerosLidos.length; k++) {
-                    soma+= numerosLidos2[k];
+                for(int k=0; k<numerosLidos1.length; k++) {
+                    soma+= numerosLidos1[k];
                 }
-                if(soma == 100){
-                    Toast.makeText(getBaseContext(), "Parabéns Você Concluiu o Exercício 2 ", Toast.LENGTH_LONG).show();
+
+                if(soma == 0) {
+                    Toast.makeText(getBaseContext(), "Tente Novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 1) {
+                    Toast.makeText(getBaseContext(), "caixa C1 tente novamente", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 2) {
+                    Toast.makeText(getBaseContext(), "caixa C2 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 3) {
+                    Toast.makeText(getBaseContext(), "caixa A2 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 4) {
+                    Toast.makeText(getBaseContext(), "caixa C3 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 6) {
+                    Toast.makeText(getBaseContext(), "caixa B3 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 7) {
+                    Toast.makeText(getBaseContext(), "caixa A3 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 8) {
+                    Toast.makeText(getBaseContext(), "caixa C4 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 9) {
+                    Toast.makeText(getBaseContext(), "caixa B4 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 11) {
+                    Toast.makeText(getBaseContext(), "caixa A4 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 12) {
+                    Toast.makeText(getBaseContext(), "caixa C5 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 13) {
+                    Toast.makeText(getBaseContext(), "caixa B5 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 14) {
+                    Toast.makeText(getBaseContext(), "caixa A5 tente novamente ", Toast.LENGTH_LONG).show();
+                }
+
+                if(soma == 5) {
+                    Toast.makeText(getBaseContext(), "Primeira Linha , letra (C)  Ok, 5 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 10) {
+                    Toast.makeText(getBaseContext(), "Segunda linha - Letra (C) ,10 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 15) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 2 - Letra (A) ,15 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 20) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (C) ,20 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 25) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (B) ,25 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 30) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (A) ,30 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 35) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (C) ,35 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 40) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (B) ,40 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 45) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (A) ,45 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 50) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 5 - Letra (C) ,50 Pontos ", Toast.LENGTH_LONG).show();
+                }
+                if(soma == 55) {
+                    Toast.makeText(getBaseContext(), "Acertou Linha 5 - Letra (B) ,55 Pontos ", Toast.LENGTH_LONG).show();
+                }
+
+                if(soma == 60){
+                    Toast.makeText(getBaseContext(), "Parabéns! Você acertou todos os valores  ", Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -377,11 +545,11 @@ public class Tela3 extends AppCompatActivity {
                 startActivity(tela3);
             }
         });
-        botAjuda3.setOnClickListener(new View.OnClickListener() {
+        botDica3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ajuda3 = new Intent(Tela3.this,Tela6.class);
-                startActivity(ajuda3);
+                Intent botDica3 = new Intent(Tela3.this,Tela6.class);
+                startActivity(botDica3);
 
             }
         });
@@ -391,7 +559,7 @@ public class Tela3 extends AppCompatActivity {
     private void IniciarComponentes () {
         proximo3 = findViewById(R.id.proximo);
         voltar3 = findViewById(R.id.voltar);
-        botAjuda3 = findViewById(R.id.botAjuda);
+        botDica3 = findViewById(R.id.botDica);
         //button_sair= findViewById(R.id.button_sair);
         botConfirmar = findViewById(R.id.botConfirmar);
         //menu3 = findViewById(R.id.menu3);

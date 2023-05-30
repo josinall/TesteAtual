@@ -35,18 +35,6 @@ tools:context=".Tela4">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/botAjuda"
-            android:layout_width="105dp"
-            android:layout_height="79dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/bot_ajuda"
-            tools:ignore="ContentDescription" />
-
         <TextView
             android:id="@+id/exercicio3"
             android:layout_width="142dp"
@@ -54,6 +42,7 @@ tools:context=".Tela4">
             android:gravity="center_horizontal"
             android:text="Exercício 3"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#F3F2F0"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -61,7 +50,7 @@ tools:context=".Tela4">
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.606"
             tools:ignore="HardcodedText" />
 
         <ImageView
@@ -506,6 +495,19 @@ tools:context=".Tela4">
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/botDica"
+            android:layout_width="244dp"
+            android:layout_height="152dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.446"
+            app:srcCompat="@drawable/dica"
+            tools:ignore="ContentDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

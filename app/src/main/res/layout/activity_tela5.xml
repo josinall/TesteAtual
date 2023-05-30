@@ -8,17 +8,17 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="285dp"
-        android:layout_height="347dp"
+        android:layout_width="286dp"
+        android:layout_height="372dp"
         android:gravity="center_horizontal"
-        android:text="    O Apliccativo Meu Teste de Mesa  surgiu através dos exerícios da Profª Vanessa Dantas do curso de Licenciatura em Ciências da Computação da UFPB Campus IV Rio Tinto.                                      Um protótipo de uma ferramenta digital na versão mobile com o objetivo de auxiliar o uso que vinha sendo feito através do modo tradicional papel e lápis"
+        android:text="    O Aplicativo   Meu   Teste  de Mesa   surgiu   inspirado através   dos  exerícios    da    Profª   Vanessa  Dantas  do curso   de  Licenciatura em Ciências  da  Computação  da   UFPB  Campus   IV  em                    Rio Tinto.                              . Um      protótipo     de    uma ferramenta digital na versão mobile     com   o     objetivo de  auxiliar  o uso que vinha sendo feito através do modo tradicional    papel   e   lápis."
         android:textSize="22dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.601"
+        app:layout_constraintVertical_bias="0.559"
         tools:ignore="SpUsage" />
 
     <ImageView
@@ -34,7 +34,7 @@
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/voltar5"
+        android:id="@+id/menu5"
         android:layout_width="149dp"
         android:layout_height="106dp"
         app:layout_constraintBottom_toBottomOf="parent"

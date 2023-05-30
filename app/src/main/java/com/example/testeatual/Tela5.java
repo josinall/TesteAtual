@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Tela5 extends AppCompatActivity {
-    public ImageView voltar5;
+    public ImageView menu5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class Tela5 extends AppCompatActivity {
         setTitle("");
         IniciarComponentes();
 
-        voltar5.setOnClickListener(new View.OnClickListener() {
+        menu5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent tela5 = new Intent(Tela5.this,Tela1.class);
@@ -27,7 +27,7 @@ public class Tela5 extends AppCompatActivity {
         });
     }
     private void IniciarComponentes() {
-        voltar5 = findViewById(R.id.voltar5);
+        menu5 = findViewById(R.id.menu5);
 
     }
 }

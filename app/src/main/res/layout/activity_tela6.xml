@@ -7,17 +7,16 @@
     tools:context=".Tela6">
 
     <ImageView
-        android:id="@+id/Ajuda1"
-        android:layout_width="322dp"
-        android:layout_height="517dp"
+        android:id="@+id/dicas_a"
+        android:layout_width="407dp"
+        android:layout_height="592dp"
         android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411"
-        app:srcCompat="@drawable/dica1a"
+        app:layout_constraintVertical_bias="0.446"
+        app:srcCompat="@drawable/dica1b"
         tools:ignore="ContentDescription" />
 
     <ImageView
@@ -28,8 +27,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.94"
+        app:layout_constraintVertical_bias="0.952"
         app:srcCompat="@drawable/menu1"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/voltar6"
+        android:layout_width="124dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922"
+        app:srcCompat="@drawable/bot_voltar"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/proximo6"
+        android:layout_width="124dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922"
+        app:srcCompat="@drawable/bot_next"
         tools:ignore="ContentDescription" />
 
     <ImageView

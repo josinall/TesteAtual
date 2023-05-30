@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        timer.schedule(timerTask,4000);//splash de 4 segundos
+        timer.schedule(timerTask,3000);//splash de 4 segundos
 
     }
     //splash de 4 segundos
