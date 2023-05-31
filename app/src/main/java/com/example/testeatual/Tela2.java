@@ -99,7 +99,7 @@ public class Tela2 extends AppCompatActivity {
                     digA1.setText("");  //apaga
                     digB1.setText("-");
                     digC1.setText("-");
-                    digA1.setError(" preencha o campo");
+                    //digA1.setError(" preencha o campo");
                     Toast.makeText(Tela2.this, "você errou a1", Toast.LENGTH_SHORT).show();
                     numerosLidos1[0] = 1;
 
@@ -117,11 +117,11 @@ public class Tela2 extends AppCompatActivity {
                 ///----------------------LINHA 2 A2--------------------------------------
                 if (!A2.equalsIgnoreCase(linha.get(1).getA())) {
                     if (A1.isEmpty()){
-                        digA1.setError(" preencha ");
+                        //digA1.setError(" preencha ");
                         digA1.requestFocus();//cursor
 
                     }if (A2.isEmpty()){
-                        digA2.setError(" preencha o campo");
+                       // digA2.setError(" preencha o campo");
                         //
                     }else{
                     digA2.setText("");  //se errar numero ficar vazio
@@ -144,7 +144,7 @@ public class Tela2 extends AppCompatActivity {
                     digC2.setText("-");
                     //digA2.setText("");
                     if (B2.isEmpty()){
-                        digB2.setError(" preencha o campo");
+                       // digB2.setError(" preencha o campo");
                     }else {
                         digB2.setText("");
                         Toast.makeText(Tela2.this, "josa", Toast.LENGTH_SHORT).show();
@@ -170,7 +170,7 @@ public class Tela2 extends AppCompatActivity {
                         digA1.requestFocus();//cursor
                     }
                     if (A3.isEmpty()){
-                        digA3.setError(" preencha o campo");
+                       // digA3.setError(" preencha o campo");
                     }else {
                         digA3.setText("");  //apaga
                         numerosLidos1[0] =  4;
@@ -188,7 +188,7 @@ public class Tela2 extends AppCompatActivity {
                         digA1.requestFocus();//cursor
                     }
                     if (B3.isEmpty()){
-                        digB3.setError(" preencha o campo");
+                       // digB3.setError(" preencha o campo");
                     }else {
                         digB3.setText("");  //apaga
                         numerosLidos1[0] = 6;
@@ -206,7 +206,7 @@ public class Tela2 extends AppCompatActivity {
                     //digB3.setText("");
                     //digA3.setText("");
                     if (C3.isEmpty()){
-                        digC3.setError(" preencha o campo");
+                       // digC3.setError(" preencha o campo");
                     }else {
                         digC3.setText("");  //apaga
                         numerosLidos1[0] = 7;
@@ -235,7 +235,7 @@ public class Tela2 extends AppCompatActivity {
                 //----------------------------LINHA 4 A4--------------------------------
                 if (!A4.equalsIgnoreCase(linha.get(3).getA())) {
                     if (A4.isEmpty()){
-                        digA4.setError(" preencha o campo");
+                       // digA4.setError(" preencha o campo");
                     }else {
                         digA4.setText("");
                         numerosLidos1[0] = 8;
@@ -258,7 +258,7 @@ public class Tela2 extends AppCompatActivity {
                 //-----------------------LINHA 4 B4 -----------------------------------
                 if (!B4.equalsIgnoreCase(linha.get(3).getB())) {
                     if (B4.isEmpty()){
-                        digB4.setError(" preencha o campo");
+                       // digB4.setError(" preencha o campo");
                     }else{
                         digB4.setText("");
                         numerosLidos1[0] = 9;
@@ -283,7 +283,7 @@ public class Tela2 extends AppCompatActivity {
                 if (!C4.equalsIgnoreCase(linha.get(3).getC())) {
 
                     if (C4.isEmpty()){
-                        digC4.setError(" preencha o campo");
+                        //digC4.setError(" preencha o campo");
                     }else {
                         digC4.setText("");
                         numerosLidos1[0] = 11;
@@ -317,7 +317,7 @@ public class Tela2 extends AppCompatActivity {
                 if (!A5.equalsIgnoreCase(linha.get(4).getA())) {
 
                     if (A5.isEmpty()){
-                        digA5.setError(" preencha o campo ");
+                        //digA5.setError(" preencha o campo ");
                     }else {
                         digA5.setText("");
                         numerosLidos1[0] = 12;
@@ -345,7 +345,7 @@ public class Tela2 extends AppCompatActivity {
                 if (!B5.equalsIgnoreCase(linha.get(4).getB())) {
 
                     if (B5.isEmpty()){
-                        digB5.setError(" preencha o campo ");
+                        //digB5.setError(" preencha o campo ");
                     }else {
                         digB5.setText("");
                         numerosLidos1[0] = 13;
@@ -374,7 +374,7 @@ public class Tela2 extends AppCompatActivity {
                 //-----------------------LINHA 5 C5------------------------------------
                 if (!C5.equalsIgnoreCase(linha.get(4).getC())) {
                     if (C5.isEmpty()){
-                        digC5.setError(" preencha o campo");
+                        //digC5.setError(" preencha o campo");
                     }
                     else {
                         digC5.setText("");
@@ -425,39 +425,51 @@ public class Tela2 extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Tente Novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 1) {
+                    digA1.setError(" Iválido ");
                     Toast.makeText(getBaseContext(), "caixa A1 tente novamente", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 2) {
+                    digA2.setError(" Tente outo valor ");
                     Toast.makeText(getBaseContext(), "caixa A2 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 3) {
+                    digB2.setError(" Reveja a Potência");
                     Toast.makeText(getBaseContext(), "caixa B2 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 4) {
+                    digA3.setError(" Este valor é Inválido");
                     Toast.makeText(getBaseContext(), "caixa A3 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 6) {
+                    digB3.setError(" Não validou");
                     Toast.makeText(getBaseContext(), "caixa B3 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 7) {
+                    digC3.setError(" Lembre as Regras de Prescedêcia ");
                     Toast.makeText(getBaseContext(), "caixa C3 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 8) {
+                    digA4.setError(" Valor mudou, tente outro ");
                     Toast.makeText(getBaseContext(), "caixa A4 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 9) {
+                    digB4.setError(" Tente de novo");
                     Toast.makeText(getBaseContext(), "caixa B4 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 11) {
+                    digC4.setError(" Inválido ");
                     Toast.makeText(getBaseContext(), "caixa C4 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 12) {
+                    digA5.setError(" Preencha o campo ");
                     Toast.makeText(getBaseContext(), "caixa A5 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 13) {
+                    digB5.setError(" Não é esse o valor ");
                     Toast.makeText(getBaseContext(), "caixa B5 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 14) {
+                    digC5.setError(" Tente novamente ");
                     Toast.makeText(getBaseContext(), "caixa C5 tente novamente ", Toast.LENGTH_LONG).show();
                 }
 

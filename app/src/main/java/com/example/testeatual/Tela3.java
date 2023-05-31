@@ -96,7 +96,7 @@ public class Tela3 extends AppCompatActivity {
                     digA1.setText("-");
                     digB1.setText("-");
                     digC1.setText("");
-                    digC1.setError(" preencha o campo");
+                    //digC1.setError(" preencha o campo");
                     numerosLidos1[0] = 1;
 
                 } else {
@@ -114,7 +114,7 @@ public class Tela3 extends AppCompatActivity {
                         digC1.requestFocus();//cursor C1
                     }
                     if(C2.isEmpty()){
-                        digC2.setError(" preencha o campo");
+                      //  digC2.setError(" preencha o campo");
                     } else {
                         digC2.setText("");
                         numerosLidos1[0] = 2;
@@ -130,11 +130,11 @@ public class Tela3 extends AppCompatActivity {
                 //--------------------------LINHA 2 A2------------------------------------
                 if (!A2.equalsIgnoreCase(linha.get(1).getA())) {//se for falso
                     if(C1.isEmpty()){
-                        digC1.setError(" preencha ");
+                      //  digC1.setError(" preencha ");
                         digC1.requestFocus();//cursor
 
                     }if (A2.isEmpty()){
-                        digA2.setError(" preencha o campo");
+                      //  digA2.setError(" preencha o campo");
                         //
                     }else{
                         digA2.setText("");  //se errar numero ficar vazio
@@ -162,7 +162,7 @@ public class Tela3 extends AppCompatActivity {
                         digC1.requestFocus();//cursor
                     }
                     if (C3.isEmpty()){
-                        digC3.setError(" preencha o campo");
+                       // digC3.setError(" preencha o campo");
                         //
                     }else{
                         digC3.setText("");  //se errar numero ficar vazio
@@ -181,7 +181,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (B3.isEmpty()){
-                        digB3.setError(" preencha o campo");
+                       // digB3.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 6;
@@ -201,7 +201,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (A3.isEmpty()){
-                        digA3.setError(" preencha o campo");
+                       // digA3.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 7;
@@ -235,7 +235,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (C4.isEmpty()){
-                        digC4.setError(" preencha o campo");
+                       // digC4.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 8;
@@ -263,7 +263,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (B4.isEmpty()){
-                        digB4.setError(" preencha o campo");
+                      //  digB4.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 9;
@@ -291,7 +291,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (A4.isEmpty()){
-                        digA4.setError(" preencha o campo");
+                      //  digA4.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 11;
@@ -328,7 +328,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (C5.isEmpty()){
-                        digC5.setError(" preencha o campo");
+                        //digC5.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 12;
@@ -360,7 +360,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (B5.isEmpty()){
-                        digB5.setError(" preencha o campo");
+                        //digB5.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 13;
@@ -394,7 +394,7 @@ public class Tela3 extends AppCompatActivity {
                     if (C1.isEmpty()) {
                         digC1.requestFocus();//cursor
                     }if (A5.isEmpty()){
-                        digA5.setError(" preencha o campo");
+                        //digA5.setError(" preencha o campo");
                         //
                     }else {
                         numerosLidos1[0] = 14;
@@ -450,39 +450,51 @@ public class Tela3 extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Tente Novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 1) {
+                    digC1.setError(" Iválido ");
                     Toast.makeText(getBaseContext(), "caixa C1 tente novamente", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 2) {
+                    digC2.setError(" Tente outo valor ");
                     Toast.makeText(getBaseContext(), "caixa C2 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 3) {
+                    digA2.setError(" Calcule Novamente");
                     Toast.makeText(getBaseContext(), "caixa A2 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 4) {
+                    digC3.setError(" Este valor é Inválido");
                     Toast.makeText(getBaseContext(), "caixa C3 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 6) {
+                    digB3.setError(" Esse valor não é o resto da divisão");
                     Toast.makeText(getBaseContext(), "caixa B3 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 7) {
+                    digA3.setError(" Lembre de guardar na memória ");
                     Toast.makeText(getBaseContext(), "caixa A3 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 8) {
+                    digC4.setError(" Lembre as Regras de Prescedêcia ");
                     Toast.makeText(getBaseContext(), "caixa C4 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 9) {
+                    digB4.setError(" Tente de novo");
                     Toast.makeText(getBaseContext(), "caixa B4 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 11) {
+                    digA4.setError(" Inválido ");
                     Toast.makeText(getBaseContext(), "caixa A4 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 12) {
+                    digC5.setError(" Preencha o campo ");
                     Toast.makeText(getBaseContext(), "caixa C5 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 13) {
+                    digB5.setError(" Não é esse o valor ");
                     Toast.makeText(getBaseContext(), "caixa B5 tente novamente ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 14) {
+                    digA5.setError(" Tente novamente ");
                     Toast.makeText(getBaseContext(), "caixa A5 tente novamente ", Toast.LENGTH_LONG).show();
                 }
 
