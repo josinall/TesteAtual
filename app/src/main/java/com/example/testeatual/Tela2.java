@@ -18,7 +18,6 @@ public class Tela2 extends AppCompatActivity {
     public ImageView botDica;
     public ImageView proximo;
     public ImageView voltar;
-    //public ImageView menu;
 
     Tabela linha0;
     TextView va1;TextView va2;TextView va3;TextView va4;TextView va5;
@@ -36,8 +35,7 @@ public class Tela2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela2);
         setTitle("");
-        //Toast t1 = Toast.makeText(getBaseContext(), "Você Acertou",Toast.LENGTH_LONG);
-        //Toast t2 = Toast.makeText(getBaseContext(), "tente novamente outro número",Toast.LENGTH_LONG);
+
         va1 = findViewById(R.id.linha1);  // instancio
         va2 = findViewById(R.id.linha2);
         va3 = findViewById(R.id.linha3);
@@ -49,16 +47,7 @@ public class Tela2 extends AppCompatActivity {
         digB4 = findViewById(R.id.cxB4);digB5 = findViewById(R.id.cxB5);
         digC1 = findViewById(R.id.cxC1);digC2 = findViewById(R.id.cxC2);digC3 = findViewById(R.id.cxC3);
         digC4 = findViewById(R.id.cxC4);digC5 = findViewById(R.id.cxC5);
-        /*
-        x.add(linha0);
 
-        Colunas x1 = new Colunas("a1", "b1", "c1");
-        Colunas x2 = new Colunas("a2", "b2", "c2");
-        Colunas x3 = new Colunas("a3", "b3", "c3");
-        Colunas x4 = new Colunas("a4", "b4", "c4");
-        Colunas x5 = new Colunas("a5", "b5", "c5");
-
-        */
 
         botConfirmar = findViewById(R.id.botConfirmar);
 
@@ -107,7 +96,6 @@ public class Tela2 extends AppCompatActivity {
                 //--------------------------LINHA 1 A1----------------------------------
 
                 if (!A1.equalsIgnoreCase(linha.get(0).getA())) {
-                    //digA1.setError(" preencha o campo novamente");
                     digA1.setText("");  //apaga
                     digB1.setText("-");
                     digC1.setText("-");
@@ -173,7 +161,6 @@ public class Tela2 extends AppCompatActivity {
                         digA3.requestFocus();
                         digC2.setText("-");
                         va2.setText(">> B =  3 ** 3");
-                     //   Toast.makeText(Tela2.this, "vocè acertou a letra B e lina 2", Toast.LENGTH_LONG).show();
                         numerosLidos1[0] = 15;
 
                     }
@@ -189,7 +176,6 @@ public class Tela2 extends AppCompatActivity {
                         numerosLidos1[0] =  4;
                     }
                 } else {
-                    //Toast.makeText(Tela2.this, "vocè acertou a letra A e lina 3", Toast.LENGTH_LONG).show();
                     if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     }
@@ -208,8 +194,6 @@ public class Tela2 extends AppCompatActivity {
                         numerosLidos1[0] = 6;
                     }
                 } else {
-
-                    //Toast.makeText(Tela2.this, "vocè acertou a letra B e lina 3", Toast.LENGTH_LONG).show();
                     if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     }
@@ -245,13 +229,11 @@ public class Tela2 extends AppCompatActivity {
                             && C3.equalsIgnoreCase(linha.get(2).getC())) {
                         digA4.requestFocus();
                         va3.setText(">> C =  B/A+1");
-                     //   Toast.makeText(Tela2.this, "vocè acertou a letra C e lina 3", Toast.LENGTH_LONG).show();
                         numerosLidos1[0] = 30;;
                     }
                 }
                 //----------------------------LINHA 4 A4--------------------------------
                 if (!A4.equalsIgnoreCase(linha.get(3).getA())) {
-                      //apaga
                     if (A4.isEmpty()){
                         digA4.setError(" preencha o campo");
                     }else {
@@ -259,7 +241,6 @@ public class Tela2 extends AppCompatActivity {
                         numerosLidos1[0] = 8;
                     }
                 } else {//linha 4
-                   // Toast.makeText(Tela2.this, "vocè acertou a letra A e lina 4", Toast.LENGTH_LONG).show();
                     if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     } else if (A2.isEmpty()) {
@@ -276,7 +257,6 @@ public class Tela2 extends AppCompatActivity {
                 }
                 //-----------------------LINHA 4 B4 -----------------------------------
                 if (!B4.equalsIgnoreCase(linha.get(3).getB())) {
-
                     if (B4.isEmpty()){
                         digB4.setError(" preencha o campo");
                     }else{
@@ -285,7 +265,6 @@ public class Tela2 extends AppCompatActivity {
                     }
 
                 } else {//linha 4
-                   // Toast.makeText(Tela2.this, "vocè acertou a letra B e lina 4", Toast.LENGTH_LONG).show();
                     if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     } else if (A2.isEmpty()) {
@@ -330,7 +309,6 @@ public class Tela2 extends AppCompatActivity {
                             && C4.equalsIgnoreCase(linha.get(3).getC())) {
                         digA5.requestFocus();
                         va4.setText(">> A =  A - 2");
-                       // Toast.makeText(Tela2.this, "vocè acertou a letra C e lina 4", Toast.LENGTH_LONG).show();
                         numerosLidos1[0] = 45;
 
                     }
@@ -345,7 +323,6 @@ public class Tela2 extends AppCompatActivity {
                         numerosLidos1[0] = 12;
                     }
                 } else { // linha 5
-                   // Toast.makeText(Tela2.this, "vocè acertou a letra A e lina 5", Toast.LENGTH_LONG).show();
                     if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     } else if (A2.isEmpty()) {
@@ -374,7 +351,6 @@ public class Tela2 extends AppCompatActivity {
                         numerosLidos1[0] = 13;
                     }
                 } else { // linha 5
-                   // Toast.makeText(Tela2.this, "vocè acertou a letra B e lina 5", Toast.LENGTH_LONG).show();
                     if (A1.isEmpty()) {
                         digA1.requestFocus();//cursor
                     } else if (A2.isEmpty()) {
@@ -397,7 +373,6 @@ public class Tela2 extends AppCompatActivity {
                 }
                 //-----------------------LINHA 5 C5------------------------------------
                 if (!C5.equalsIgnoreCase(linha.get(4).getC())) {
-
                     if (C5.isEmpty()){
                         digC5.setError(" preencha o campo");
                     }
@@ -430,7 +405,6 @@ public class Tela2 extends AppCompatActivity {
                             && C5.equalsIgnoreCase(linha.get(4).getC())) {
                         va5.setText(">> C =  B - C");
 
-                     //   Toast.makeText(Tela2.this, "vocè acertou a letra C e lina 5", Toast.LENGTH_LONG).show();
                         numerosLidos1[0] = 60;
                     }
 
@@ -553,15 +527,6 @@ public class Tela2 extends AppCompatActivity {
 
             }
         });
-        /*menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {  //ação para proxima tela
-                Intent menu = new Intent(getApplicationContext(),Tela1.class);
-                startActivity(menu);
-
-            }
-        });
-        */
 
 
     }
@@ -570,7 +535,6 @@ public class Tela2 extends AppCompatActivity {
         proximo = findViewById(R.id.proximo);
         voltar = findViewById(R.id.voltar);
         botDica = findViewById(R.id.dica1);
-        //menu = findViewById(R.id.menu1);
         botConfirmar = findViewById(R.id.botConfirmar);
     }
 
