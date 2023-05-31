@@ -478,37 +478,37 @@ public class Tela4 extends AppCompatActivity {
                 }
 
                 if(soma == 5) {
-                    Toast.makeText(getBaseContext(), "Primeira Linha , letra (B)  Ok, 5 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Primeira Linha , letra (B) ,             ( 5 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 10) {
-                    Toast.makeText(getBaseContext(), "Segunda linha - Letra (C) ,10 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Segunda linha - Letra (C) ,            ( 10 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 15) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 2 - Letra (B) ,15 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 2 - Letra (B) ,            ( 15 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 20) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (C) ,20 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (C) ,            ( 20 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 25) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (B) ,25 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (B) ,            ( 25 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 30) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (A) ,30 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 3 - Letra (A) ,            ( 30 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 35) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (C) ,35 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (C) ,            ( 35 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 40) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (B) ,40 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (B) ,            ( 40 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 45) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (A) ,45 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 4 - Letra (A) ,            ( 45 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 50) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 5 - Letra (C) ,50 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 5 - Letra (C) ,            ( 50 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
                 if(soma == 55) {
-                    Toast.makeText(getBaseContext(), "Acertou Linha 5 - Letra (B) ,55 Pontos ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Acertou Linha 5 - Letra (B) ,            ( 55 Pontos ) ", Toast.LENGTH_LONG).show();
                 }
 
                 if(soma == 60){
