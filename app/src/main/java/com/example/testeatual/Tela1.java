@@ -23,7 +23,7 @@ public class Tela1 extends AppCompatActivity {
         exercicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent exercicios = new Intent(Tela1.this,Tela2.class);
+                Intent exercicios = new Intent(Tela1.this,Tela8.class);
                 startActivity(exercicios);
 
             }
